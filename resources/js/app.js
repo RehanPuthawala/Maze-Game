@@ -2,12 +2,12 @@ const { Engine, World, Runner, Render, Bodies, Body, Events } = Matter;
 
 const engine = Engine.create();
 const { world } = engine;
-// world.gravity.y = 0;
+world.gravity.y = 0;
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const rows = 20;
-const columns = 45;
+const rows = 35;
+const columns = 50;
 const cellWidth = width / columns;
 const cellHeight = height / rows;
 
@@ -28,10 +28,10 @@ Runner.run(Runner.create(), engine);
 
 const Boundaries = [
   // x , y, w, h, optionObject
-  Bodies.rectangle(width / 2, 0, width, 5, { isStatic: true }),
-  Bodies.rectangle(0, height / 2, 5, height, { isStatic: true }),
-  Bodies.rectangle(width / 2, height, width, 5, { isStatic: true }),
-  Bodies.rectangle(width, height / 2, 5, height, { isStatic: true }),
+  Bodies.rectangle(width / 2, 0, width, 7, { isStatic: true }),
+  Bodies.rectangle(0, height / 2, 7, height, { isStatic: true }),
+  Bodies.rectangle(width / 2, height, width, 7, { isStatic: true }),
+  Bodies.rectangle(width, height / 2, 7, height, { isStatic: true }),
 ];
 
 World.add(world, Boundaries);
