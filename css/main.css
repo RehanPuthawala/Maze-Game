@@ -1,1 +1,2 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative}canvas{box-shadow:0 1rem 2rem #000}
+/*# sourceMappingURL=main.css.map */

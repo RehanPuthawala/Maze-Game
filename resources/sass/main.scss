@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // overflow-y: hidden;
+  position: relative;
+}
+
+canvas {
+  // border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 1);
+  // margin-bottom: 5rem;
+}
