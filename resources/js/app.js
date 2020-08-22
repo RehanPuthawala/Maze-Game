@@ -2,12 +2,12 @@ const { Engine, World, Runner, Render, Bodies, Body, Events } = Matter;
 
 const engine = Engine.create();
 const { world } = engine;
-world.gravity.y = 0;
+// world.gravity.y = 0;
 
 const width = window.innerWidth;
 const height = window.innerHeight;
-const rows = 35;
-const columns = 50;
+const rows = 20;
+const columns = 35;
 const cellWidth = width / columns;
 const cellHeight = height / rows;
 
@@ -126,7 +126,7 @@ const recursion = (row, column) => {
   }
 };
 
-recursion(1, 1);
+recursion(startRow, startColumn);
 
 //? Drawing Horizontals Walls on Canvas
 horizontals.forEach((row, rowIdx) => {
@@ -238,6 +238,7 @@ Events.on(engine, "collisionStart", (event) => {
       bodies.includes(collision.bodyB.label)
     ) {
       world.gravity.y = 1;
+      document.querySelector(".winner-overlay").classList.remove("hidden");
       world.bodies.forEach((shape) => {
         if (shape.label === "wall") {
           Body.setStatic(shape, false);

@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maze Game</title>
 
-    <!-- Link to JavaScript Files -->
-    <script defer src="resources/js/app.js"></script>
-
-    <!-- Link to Stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
 
     <!-- Link to Matter Js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js"
+      integrity="sha512-pi0tSRZdlNRZeANPwdAIHRAYg6gZZV6QlAiyHXn5TYqLzBKE9jlttO/QgYLMhISD6oNv2kPsVelx+n5nw0FqKA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link to JavaScript Files -->
+    <script defer src="resources/js/app.js"></script>
+    <!-- <script defer src="resources/js/app-oop.js"></script> -->
+
+    <!-- Link to Stylesheet -->
   </head>
-  <body></body>
+  <body>
+    <div class="winner-overlay hidden">
+      <h1 class="heading-1">Congratulatins ! You Won the Challenge</h1>
+      <button class="next-level-btn">Go to Next Level</button>
+    </div>
+  </body>
 </html>
